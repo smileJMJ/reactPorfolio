@@ -1,17 +1,17 @@
 {
   "data": [
     {
-      "idx": 0,
+      "id": 0,
       "title": "타이틀 0",
       "contents": "내용 0"
     },
     {
-      "idx": 1,
+      "id": 1,
       "title": "타이틀 1",
       "contents": "내용 1"
     },
     {
-      "idx": 2,
+      "id": 2,
       "title": "타이틀 2",
       "contents": "내용 2"
     }

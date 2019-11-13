@@ -5,13 +5,13 @@ class Gnb extends Component {
     makeLi() {
         let li = [];
         let data = [
-            {idx: '1', name:'MENU1'},
-            {idx: '2', name:'MENU2'},
-            {idx: '3', name:'MENU3'}
+            {id: '1', name:'MENU1'},
+            {id: '2', name:'MENU2'},
+            {id: '3', name:'MENU3'}
         ];
 
         data.forEach((v, i) => {
-            li[i] = <li key={v.idx}><NavLink activeClassName="on" to={`/view/${v.idx}`}>{v.name}</NavLink></li>;
+            li[i] = <li key={v.id}><NavLink activeClassName="on" to={`/view/${v.id}`}>{v.name}</NavLink></li>;
         });
         return li;
     }

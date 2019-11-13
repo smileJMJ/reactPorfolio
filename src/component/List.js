@@ -6,7 +6,7 @@ class List extends Component {
         let t = [];
         if(data.length <= 0) return;
         data.map((v, i) => (
-            t[i] = <li key={v.idx}><Link to={`/view/${v.idx}`}>{v.title}</Link></li>
+            t[i] = <li key={v.id}><Link to={`/view/${v.id}`}>{v.title}</Link></li>
         ));
         return t;
     }

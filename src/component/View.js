@@ -1,22 +1,16 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
+import  * as actionTypes from '../action';
 import axios from 'axios';
 
 class View extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: {}
-        }
-    }
-    getViewData() {
+    getViewData(id) {
+        console.log(id)
         let data;
-        axios.get(`/json/viewData${this.props.match.params.idx}.json`)
+        axios.get(`/json/viewData${id}.json`)
             .then(response => {
                 data = response;
-                this.state.setState({
-
-                })
+                this.props.loadView(id, data);
             })
             .catch(e => {
                 data = '해당 데이터가 없습니다.'
@@ -25,13 +19,20 @@ class View extends Component {
     }
     render() {
         return(
-            <div>{this.getViewData()}</div>
+            <div>{this.getViewData(this.props.match.params.id)}</div>
         );
     }
 }
 
 const mapStateToProps = (state) => {
-    return { mode: 'view' };
+    return {
+        id: state.id
+    };
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadView: (id, data) => { dispatch(actionTypes.loadView(id, data)); }
+    }
 };
 
 export default connect(mapStateToProps)(View);

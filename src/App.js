@@ -15,7 +15,7 @@ class App extends Component {
             <Gnb></Gnb>
             <Switch>
                 <Route path="/about" component={About}/>
-                <Route path="/view/:idx" component={View}/>
+                <Route path="/view/:id" component={View}/>
                 <Route exact path="/" component={Main}/>
                 <Route component={NotFound}/>
             </Switch>

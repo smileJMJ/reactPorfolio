@@ -8,19 +8,22 @@ import axios from "axios";
 
 class Main extends Component {
     componentDidMount() {
+        this.getData();
+    }
+    getData() {
         axios.get('/json/listData.json')
-            .then(response => {
-                let data = response['data']['data'];
-                this.props.loadMainHandler(data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        .then(response => {
+            let data = response['data']['data'];
+            this.props.loadMainHandler(data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
     }
     render() {
         return(
             <div>
-                <List data={this.props.data}></List>
+                <List data={this.props.listData}></List>
             </div>
         );
     }
@@ -28,7 +31,7 @@ class Main extends Component {
 
 let mapStateToProps = (state) => {
     return {
-        data: state.data
+        listData: state.listData
     }
 }
 
