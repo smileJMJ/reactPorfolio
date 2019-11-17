@@ -1,0 +1,22 @@
+.girl {
+  position: absolute;
+  z-index: 10;
+  width: 416px;
+  height: 454px;
+  background-image: url(../../../resources/img/girl/girl_idle.png);
+  background-repeat: no-repeat;
+}
+.girl[data-status="dead"] {
+  width: 601px;
+  height: 509px;
+  background-image: url(../../../resources/img/girl/girl_dead.png);
+}
+.girl[data-status="jump"] {
+  background-image: url(../../../resources/img/girl/girl_jump.png);
+}
+.girl[data-status="run"] {
+  background-image: url(../../../resources/img/girl/girl_run.png);
+}
+.girl[data-status="walk"] {
+  background-image: url(../../../resources/img/girl/girl_walk.png);
+}

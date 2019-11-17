@@ -1,0 +1,20 @@
+.boy {
+    position: absolute;
+    z-index: 10;
+    width: 614px;
+    height: 564px;
+    background-image: url(../../../resources/img/boy/boy_idle.png);
+    background-repeat: no-repeat;
+}
+.boy[data-status="dead"] {
+    background-image: url(../../../resources/img/boy/boy_dead.png);
+}
+.boy[data-status="jump"] {
+    background-image: url(../../../resources/img/boy/boy_jump.png);
+}
+.boy[data-status="run"] {
+    background-image: url(../../../resources/img/boy/boy_run.png);
+}
+.boy[data-status="walk"] {
+    background-image: url(../../../resources/img/boy/boy_walk.png);
+}

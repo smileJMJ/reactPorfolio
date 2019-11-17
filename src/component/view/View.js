@@ -1,11 +1,16 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import  * as actionTypes from '../action';
+import  * as actionTypes from '../../action';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 class View extends Component {
+    componentDidMount() {
+        this.getViewData(this.props.match.params.id);
+    }
+    componentDidUpdate(prevProps) {
+    }
     getViewData(id) {
-        console.log(id)
         let data;
         axios.get(`/json/viewData${id}.json`)
             .then(response => {

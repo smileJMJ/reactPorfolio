@@ -6,6 +6,7 @@ export const GET_DATA = 'GET_DATA'; // 현재 페이지 모드에 따라 axios�
 export const LOAD_MAIN = 'LOAD_MAIN';
 export const LOAD_MENU = 'LOAD_MENU';
 export const LOAD_VIEW = 'LOAD_VIEW';
+export const CHANGE_MAIN_STATUS = 'CHANGE_MAIN_STATUS';
 
 
 // Action Creator
@@ -27,3 +28,4 @@ export const getData = makeActionCreator('getData', 'data');*/
 export const loadMain = makeActionCreator('LOAD_MAIN', 'data');
 export const loadMenu = makeActionCreator('LOAD_MENU', 'id', 'data'); // 메뉴 활성화를 위해 현재 페이지 id 필요, 메뉴 data 관리
 export const loadView = makeActionCreator('LOAD_VIEW', 'id', 'data');
+export const changeMainStatus = makeActionCreator('CHANGE_MAIN_STATUS', 'mainStatus');

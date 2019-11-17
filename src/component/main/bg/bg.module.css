@@ -1,0 +1,9 @@
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200vw;
+  height: 100vh;
+  background-image: url(../../../resources/img/bg/bg.jpg);
+  background-repeat: no-repeat;
+}

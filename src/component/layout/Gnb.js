@@ -5,9 +5,9 @@ class Gnb extends Component {
     makeLi() {
         let li = [];
         let data = [
-            {id: '1', name:'MENU1'},
-            {id: '2', name:'MENU2'},
-            {id: '3', name:'MENU3'}
+            {id: 0, name:'MENU0'},
+            {id: 1, name:'MENU1'},
+            {id: 2, name:'MENU2'}
         ];
 
         data.forEach((v, i) => {
