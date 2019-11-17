@@ -8,7 +8,7 @@ class Bg extends Component {
 
         this.bgMotion = new TimelineLite({ paused: true, repeat: -1 });
     }
-    componentDidUpdate() {
+    componentDidMount() {
         let charStatus = this.props.charStatus;
         let $bg = document.getElementById('bg');
 
