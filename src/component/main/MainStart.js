@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as Object from './object/Object';
 import Girl from './girl/Girl';
 import Boy from './boy/Boy';
 import Bg from './bg/Bg';
@@ -15,9 +16,10 @@ class MainStart extends Component {
     render() {
         return(
             <div id="main" className={styles.main} data-status="mainStart">
+                <Bg charStatus={this.state.charStatus}></Bg>
+                {Object.ground({status: 'normal'})}
                 <Girl charStatus={this.state.charStatus}></Girl>
                 <Boy charStatus={this.state.charStatus}></Boy>
-                <Bg charStatus={this.state.charStatus}></Bg>
             </div>
         );
     }

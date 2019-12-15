@@ -7,6 +7,7 @@ import Header from 'component/layout/Header';
 import Gnb from 'component/layout/Gnb';
 import Main from 'component/main/Main';
 import About from 'component/about/About';
+import Visual from 'component/list/visual/Visual';
 import View from 'component/view/View';
 import NotFound from 'component/etc/NotFound';
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Gnb></Gnb>*/}
             <Switch>
                 <Route path="/about" component={About}/>
+                <Route path="/visual" component={Visual}/>
                 <Route path="/view/:id" component={View}/>
                 <Route exact path="/" component={Main}/>
                 <Route component={NotFound}/>

@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "idx": 0,
+      "name": "inTASK",
+      "date": "2019.09 ~ 2019.11",
+      "kind": "SOLUTION",
+      "img": "/images/visual/cloud.jpg",
+      "bgColor": "#0f293f",
+      "link": "/view/intask"
+    },
+    {
+      "idx": 1,
+      "name": "inAIR",
+      "date": "2019.09 ~ 2019.11",
+      "kind": "WEBSITE",
+      "img": "/images/resources/img/visual/star.jpg",
+      "bgColor": "#622983",
+      "link": "/view/inair"
+    },
+    {
+      "idx": 2,
+      "name": "KT RECRUIT",
+      "date": "2019.09 ~ 2019.11",
+      "kind": "WEBSITE",
+      "img": "/images/resources/img/visual/sunset.jpg",
+      "bgColor": "#832937",
+      "link": "/view/ktrecruit"
+    }
+  ]
+}
