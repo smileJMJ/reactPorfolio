@@ -14,7 +14,7 @@
       "name": "inAIR",
       "date": "2019.09 ~ 2019.11",
       "kind": "WEBSITE",
-      "img": "/images/resources/img/visual/star.jpg",
+      "img": "/images/visual/star.jpg",
       "bgColor": "#622983",
       "link": "/view/inair"
     },
@@ -23,7 +23,7 @@
       "name": "KT RECRUIT",
       "date": "2019.09 ~ 2019.11",
       "kind": "WEBSITE",
-      "img": "/images/resources/img/visual/sunset.jpg",
+      "img": "/images/visual/sunset.jpg",
       "bgColor": "#832937",
       "link": "/view/ktrecruit"
     }

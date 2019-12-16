@@ -5,7 +5,8 @@ const initalState = {
     listData: [], // Main의 리스트 데이터
     viewData: {}, // View 데이터
     menuData: [], // 메뉴 데이터
-    mainStatus: 'start' // 메인 상태(start, website, websolution, end)
+    mainStatus: 'start', // 메인 상태(start, website, websolution, end)
+    language: 'ko' // 언어
 };
 
 export default function reducer(state = initalState, action) {

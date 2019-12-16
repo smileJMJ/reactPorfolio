@@ -29,7 +29,7 @@ class Visual extends Component {
     }
     render() {
         return(
-            <div className="visualArea">
+            <div>
                 {/*<VisualCanvas data={this.state.visualData}></VisualCanvas>*/}
                 <canvas className={styles.visual} id="visual"></canvas>
             </div>
