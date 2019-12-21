@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 //import VisualCanvas from './VisualCanvas';
 import Canvas from './module/canvas';
+import Ripple from './module/Ripple';
 import styles from './visual.module.css';
 
 class Visual extends Component {
@@ -13,10 +14,22 @@ class Visual extends Component {
     }*/
     componentDidMount() {
         let visualCanvas, canvas;
+        let rippleCanvas, ripple;
 
         visualCanvas = document.getElementById('visual');
         visualCanvas.width = visualCanvas.clientWidth;
         visualCanvas.height = visualCanvas.clientHeight;
+
+        rippleCanvas = document.getElementById('ripple');
+        rippleCanvas.width = visualCanvas.clientWidth;
+        rippleCanvas.height = visualCanvas.clientHeight;
+
+        ripple = new Ripple(rippleCanvas, {
+            resolution: 1080,
+            perturbance: 0.01,
+            interactive: true
+        });
+        ripple.init();
 
         axios.get('/json/visualData.json')
             .then(response => {
@@ -32,6 +45,7 @@ class Visual extends Component {
             <div>
                 {/*<VisualCanvas data={this.state.visualData}></VisualCanvas>*/}
                 <canvas className={styles.visual} id="visual"></canvas>
+                <canvas className={styles.ripple} id="ripple"></canvas>
             </div>
         );
     }
