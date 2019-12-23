@@ -30,6 +30,14 @@ class Visual extends Component {
             interactive: true
         });
         ripple.init();
+        /*setInterval(function() {
+            var x = Math.random() * rippleCanvas.width;
+            var y = Math.random() * rippleCanvas.height;
+            var dropRadius = 30;
+            var strength = 0.04 + Math.random() * 0.04;
+
+            ripple.drop(x, y, dropRadius, strength);
+        }, 1000);*/
 
         axios.get('/json/visualData.json')
             .then(response => {
