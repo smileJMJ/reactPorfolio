@@ -3,15 +3,16 @@ import axios from 'axios';
 //import VisualCanvas from './VisualCanvas';
 import Canvas from './module/canvas';
 import Ripple from './module/Ripple';
+import VisualDom from './module/visualDom';
 import styles from './visual.module.css';
 
 class Visual extends Component {
-    /*constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {
             visualData: []
         }
-    }*/
+    }
     componentDidMount() {
         let visualCanvas, canvas;
         let rippleCanvas, ripple;
@@ -30,29 +31,30 @@ class Visual extends Component {
             interactive: true
         });
         ripple.init();
-        /*setInterval(function() {
-            var x = Math.random() * rippleCanvas.width;
-            var y = Math.random() * rippleCanvas.height;
-            var dropRadius = 30;
-            var strength = 0.04 + Math.random() * 0.04;
+        setInterval(function() {
+            let x = Math.random() * rippleCanvas.width;
+            let y = Math.random() * rippleCanvas.height;
+            let dropRadius = 100;
+            let strength = 0.01 + Math.random() * 0.04;
 
             ripple.drop(x, y, dropRadius, strength);
-        }, 1000);*/
+        }, 1000);
 
         axios.get('/json/visualData.json')
             .then(response => {
-                /*this.setState({
+                this.setState({
                     visualData: response.data.data
-                });*/
-                canvas = new Canvas(visualCanvas, response.data.data);
-                canvas.init();
+                });
+                /*canvas = new Canvas(visualCanvas, response.data.data);
+                canvas.init();*/
             });
     }
     render() {
         return(
             <div>
                 {/*<VisualCanvas data={this.state.visualData}></VisualCanvas>*/}
-                <canvas className={styles.visual} id="visual"></canvas>
+                {/*<canvas className={styles.visual} id="visual"></canvas>*/}
+                <VisualDom data={this.state.visualData}></VisualDom>
                 <canvas className={styles.ripple} id="ripple"></canvas>
             </div>
         );

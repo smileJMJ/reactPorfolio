@@ -596,7 +596,6 @@ class Ripple {
             (2 * x - elWidth) / longestSide,
             (elHeight - 2 * y) / longestSide
         ]);
-        console.log(gl)
         gl.viewport(0, 0, this.resolution, this.resolution);
         gl.bindFramebuffer(gl.FRAMEBUFFER, this.framebuffers[this.bufferWriteIndex]);
         configSetting.bindTexture(this.textures[this.bufferReadIndex]);
