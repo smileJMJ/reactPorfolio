@@ -43,6 +43,7 @@
     background-position: center center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 10px rgba(255,255,255,0.3);
 }
 .visualDom .title p {
     margin-top: 30px;

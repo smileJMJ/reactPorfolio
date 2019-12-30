@@ -34,8 +34,8 @@ class Visual extends Component {
         setInterval(function() {
             let x = Math.random() * rippleCanvas.width;
             let y = Math.random() * rippleCanvas.height;
-            let dropRadius = 100;
-            let strength = 0.01 + Math.random() * 0.04;
+            let dropRadius = 300;
+            let strength = 0.05 + Math.random() * 0.04;
 
             ripple.drop(x, y, dropRadius, strength);
         }, 1000);

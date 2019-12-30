@@ -31,7 +31,7 @@ class visualDomBg {
         function motion(t) {
             let span;
             console.log(t);
-            if(Math.round(t) % 2000 < 10) {
+            if(Math.round(t) % 1000 < 10) {
                 span = _.makeSpan();
                 TweenMax.to(span, _.intervalTime*5, {top: '100%', ease: 'Quad.easeIn'});
                 let timeline = new TimelineMax();
