@@ -7,6 +7,6 @@
     height:220px;
 }
 .ground[data-status="normal"] {
-    background:url(../../../resources/img/bg/Tile.svg) repeat-x left bottom;
+    background:url('/images/bg/Tile.svg') repeat-x left bottom;
     background-position: 10% 10%;
 }

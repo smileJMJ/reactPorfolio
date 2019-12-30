@@ -4,6 +4,6 @@
   top: 0;
   width: 200vw;
   height: 100vh;
-  background-image: url(../../../resources/img/bg/bg.jpg);
+  background-image: url('/images/bg/bg.jpg');
   background-repeat: no-repeat;
 }
