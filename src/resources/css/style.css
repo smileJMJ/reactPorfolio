@@ -1,2 +1,94 @@
 @charset "utf-8";
+@import url(./reset.css);
 
+/*  COMMON  */
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*  LAYOUT  */
+#header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+#header h1 {
+    margin: 40px 0 0 40px;
+    width: 80px;
+    height: 80px;
+}
+#header h1 a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'NotoSanskr_Bold';
+    font-size: 24px;
+}
+#header h1 a::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    transform: rotate(45deg);
+}
+#header h1 a span {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+#header h1 a span:nth-child(1) { left: 11px; top: 10px; }
+#header h1 a span:nth-child(2) { left: 45px; top: 10px; }
+#header h1 a span:nth-child(3) { left: 11px; top: 42px; }
+#header h1 a span:nth-child(4) { left: 45px; top: 42px; }
+
+#header.black h1 a::after { background: #333; }
+#header.black h1 a {
+     color: #333;
+     border: 2px solid #333;
+}
+#header.white h1 a::after { background: #fff; }
+#header.white h1 a {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#btnGnb {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+#btnGnb i span {
+    display: block;
+    position: absolute;
+    left: 20px;
+    width: 40px;
+    height: 2px;
+}
+#btnGnb i span:nth-child(1) { top: 25px; }
+#btnGnb i span:nth-child(2) { top: 38px; }
+#btnGnb i span:nth-child(3) { top: 51px; }
+#header.black #btnGnb i span { background: #333; }
+#header.white #btnGnb i span { background: #fff; }
+#Gnb {display: none;}
+
+
+/*  LIST  */
+.itemArea {
+    width: 100%;
+    padding: 60px 0 240px;
+}

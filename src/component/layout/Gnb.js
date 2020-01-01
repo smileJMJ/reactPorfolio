@@ -2,24 +2,19 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Gnb extends Component {
-    makeLi() {
-        let li = [];
-        let data = [
-            {id: 0, name:'MENU0'},
-            {id: 1, name:'MENU1'},
-            {id: 2, name:'MENU2'}
-        ];
-
-        data.forEach((v, i) => {
-            li[i] = <li key={v.id}><NavLink activeClassName="on" to={`/view/${v.id}`}>{v.name}</NavLink></li>;
-        });
-        return li;
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if(this.props.data !== nextProps.data) return true;
+        return false;
     }
     render() {
         return (
-            <nav>
+            <nav id="Gnb">
                 <ul>
-                    {this.makeLi()}
+                    {
+                        this.props.data.map((v, i) => {
+                            return <li key={v.id}><NavLink activeClassName="on" to={`/view/${v.id}`}>{v.name}</NavLink></li>;
+                        })
+                    }
                 </ul>
             </nav>
         )

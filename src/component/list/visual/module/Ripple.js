@@ -180,7 +180,7 @@ class Ripple {
         let config, gl; // this.config, this.gl caching
 
         this.resize();
-        window.onresize = () => { this.resize(); }
+        window.onresize = () => { this.resize(); };
 
         // init properties from options
         this.interactive = options.interactive;
@@ -291,6 +291,7 @@ class Ripple {
                 gl_FragColor = info;
              }`
         ]);
+        gl.uniform2fv(this.dropProgram.locations.delta, this.textureDelta);
         this.updateProgram = createProgram(vertexShader, [
            `precision highp float;
             uniform sampler2D texture;

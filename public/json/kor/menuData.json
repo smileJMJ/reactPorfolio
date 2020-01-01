@@ -1,0 +1,7 @@
+{
+  "data": [
+    {"id": 0, "name":"ABOUT", "link": "/about"},
+    {"id": 1, "name":"WORK", "link":  "/work"},
+    {"id": 2, "name":"Contact", "link":  "/contact"}
+  ]
+}

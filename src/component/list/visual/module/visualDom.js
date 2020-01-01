@@ -8,7 +8,7 @@ class visualDom extends Component {
         this.visualDomTitle = new visualDomTitle({
             data: [],
             ele: document.getElementById('visualTitle'),
-            intervalTime: 1
+            intervalTime: 3
         });
         this.visualDomBg = new visualDomBg({
             ele: document.getElementById('visualBg'),
@@ -29,8 +29,8 @@ class visualDom extends Component {
         return(
             <section id="visual" className={styles.visualDom}>
                 <div id="visualTitle" className={styles.title}>
-                    <h1 style={{backgroundImage:'url(/images/visual/cloud.jpg)'}}>inAIR</h1>
-                    <p>2019.03 ~ 2019.05</p>
+                    {/*<h1></h1>*/}
+                    {/*<p>2019.03 ~ 2019.05</p>*/}
                 </div>
                 {/*<figure className={styles.video}>
                     <video muted autoPlay loop>

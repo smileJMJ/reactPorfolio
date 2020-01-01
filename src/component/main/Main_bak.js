@@ -5,7 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import * as actions from 'action';
 import styles from './main.module.css';
 
-/*import List from '../list/List';
+/*import Item from '../list/Item';
 import Girl from './girl/Girl';
 import Boy from './boy/Boy';
 import Bg from './bg/Bg';*/
@@ -37,7 +37,7 @@ class Main extends Component {
     render() {
         return(
             /*<div>
-                <List data={this.props.listData}></List>
+                <Item data={this.props.listData}></Item>
             </div>*/
             /*<div id="main" className={styles.main}>
                 <Girl charStatus={this.props.charStatus}></Girl>

@@ -30,13 +30,15 @@ class visualDomBg {
 
         function motion(t) {
             let span;
-            console.log(t);
-            if(Math.round(t) % 1000 < 10) {
+
+            if(Math.round(t) % 1000 < 20) {
                 span = _.makeSpan();
-                TweenMax.to(span, _.intervalTime*5, {top: '100%', ease: 'Quad.easeIn'});
-                let timeline = new TimelineMax();
-                timeline.to(span, 3, {x: -50, ease:'Quad.easeIn'}, "-=0.2")
-                    .to(span, 3, {x: 50, ease:'Quad.easeIn'}, "-=0.2");
+                TweenMax.to(span, _.intervalTime*5, {top: '100%', ease: 'Quad.easeIn', onComplete: function() {
+                    span.remove();
+                }});
+                let timeline = new TimelineMax({repeat: 1, yoyo: true});
+                timeline.to(span, 3, {x: -50, ease:'Linear.easeNone'})
+                    .to(span, 3, {x: 0, ease:'Linear.easeNone'});
             }
             requestAnimationFrame(motion);
         }

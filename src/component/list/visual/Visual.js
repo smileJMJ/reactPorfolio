@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-//import VisualCanvas from './VisualCanvas';
-import Canvas from './module/canvas';
 import Ripple from './module/Ripple';
 import VisualDom from './module/visualDom';
 import styles from './visual.module.css';
 
 class Visual extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visualData: []
-        }
+    // List에서 props로 data 받을 때, data 변경될 때만 rerender하기 위해 설정
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if(this.props.data !== nextProps.data) return true;
+        return false;
     }
     componentDidMount() {
-        let visualCanvas, canvas;
+        let visualCanvas;
         let rippleCanvas, ripple;
 
         visualCanvas = document.getElementById('visual');
@@ -22,8 +19,8 @@ class Visual extends Component {
         visualCanvas.height = visualCanvas.clientHeight;
 
         rippleCanvas = document.getElementById('ripple');
-        rippleCanvas.width = visualCanvas.clientWidth;
-        rippleCanvas.height = visualCanvas.clientHeight;
+        rippleCanvas.width = rippleCanvas.clientWidth;
+        rippleCanvas.height = rippleCanvas.clientHeight;
 
         ripple = new Ripple(rippleCanvas, {
             resolution: 1080,
@@ -31,6 +28,7 @@ class Visual extends Component {
             interactive: true
         });
         ripple.init();
+
         setInterval(function() {
             let x = Math.random() * rippleCanvas.width;
             let y = Math.random() * rippleCanvas.height;
@@ -39,22 +37,11 @@ class Visual extends Component {
 
             ripple.drop(x, y, dropRadius, strength);
         }, 1000);
-
-        axios.get('/json/visualData.json')
-            .then(response => {
-                this.setState({
-                    visualData: response.data.data
-                });
-                /*canvas = new Canvas(visualCanvas, response.data.data);
-                canvas.init();*/
-            });
     }
     render() {
         return(
             <div>
-                {/*<VisualCanvas data={this.state.visualData}></VisualCanvas>*/}
-                {/*<canvas className={styles.visual} id="visual"></canvas>*/}
-                <VisualDom data={this.state.visualData}></VisualDom>
+                <VisualDom data={this.props.data}></VisualDom>
                 <canvas className={styles.ripple} id="ripple"></canvas>
             </div>
         );
