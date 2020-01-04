@@ -7,7 +7,7 @@ export const LOAD_VIEW = 'LOAD_VIEW';
 export const CHANGE_MAIN_STATUS = 'CHANGE_MAIN_STATUS';
 export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
 export const CHANGE_HEADER_TYPE = 'CHANGE_HEADER_TYPE';
-export const CHANGE_THEME = 'CHANE_THEME';
+export const CHANGE_THEME = 'CHANGE_THEME';
 
 
 // Action Creator

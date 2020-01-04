@@ -13,14 +13,26 @@ class List extends Component {
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         if((this.props.language !== nextProps.language) ||
             (this.props.theme !== nextProps.theme)) {
+            let language = this.props.language;
+
+            // visual Data
+            axios.get(`/json/${language}/visualData.json`)
+                .then(response => {
+                    this.props.loadVisual(response.data.data);
+                });
+            // list Data
+            axios.get(`/json/${language}/listData.json`)
+                .then(response => {
+                    this.props.loadList(response.data.data);
+                });
             return true;
         }
         return false;
     }
 
-    componentWillUpdate() {
+    /*componentWillMount() {
         let language = this.props.language;
-console.log(language)
+        console.log(language)
         // visual Data
         axios.get(`/json/${language}/visualData.json`)
             .then(response => {
@@ -31,7 +43,7 @@ console.log(language)
             .then(response => {
                 this.props.loadList(response.data.data);
             });
-    }
+    }*/
     render() {
         return(
             <div id="container">

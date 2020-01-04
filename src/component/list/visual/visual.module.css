@@ -24,6 +24,7 @@
     height: 100vh;
     background: #010f21;
 }
+
 .visualDom .title {
     position: relative;
     z-index: 10;

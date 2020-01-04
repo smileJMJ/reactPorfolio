@@ -9,10 +9,9 @@ class Gnb extends Component {
         return false;
     }
     componentDidMount() {
-        /*let btnLanguage = document.getElementsByClassName('btnLanguage');
-        let btnTheme = document.getElementsByClassName('btnTheme');*/
-
+        let root = document.getElementById('root');
         let gnb = document.getElementById('gnb');
+
         gnb.addEventListener('click', (event) => {
             let target = event.target;
             if(target.type !== 'button') return;
@@ -20,6 +19,7 @@ class Gnb extends Component {
             if(target.dataset.language) { // 언어 버튼 클릭 시
                 this.props.changeLanguage(target.dataset.language);
             } else if(target.dataset.theme) { // 테마 버튼 클릭 시
+                root.dataset.theme = target.dataset.theme;
                 this.props.changeTheme(target.dataset.theme);
             }
         });

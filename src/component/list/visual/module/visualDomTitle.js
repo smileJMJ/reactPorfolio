@@ -9,16 +9,24 @@ class visualDomTitle {
         this.length = 0;
     }
     init (data) {
+        this.data = data;
+        this.length = data.length;
+        this.reset();
+        this.autoPlay();
+    }
+    reset() {
         let _ = this;
-        _.data = data;
-        _.length = data.length;
-        _.autoPlay();
+        if(!_.ele.hasChildNodes()) return;
+
+        _.ele.childNodes.forEach((v) => {
+            TweenMax.killTweensOf(v);
+            _.ele.removeChild(v);
+        });
     }
     autoPlay() {
-        let _ = this;
-        _.make();
-        _.motion();
-        _.index = (_.index === _.length-1) ? 0 : _.index+1;
+        this.make();
+        this.motion();
+        this.index = (this.index === this.length-1) ? 0 : this.index+1;
     }
     make() {
         let _ = this;

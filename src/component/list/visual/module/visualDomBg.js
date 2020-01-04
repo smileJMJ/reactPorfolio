@@ -8,7 +8,16 @@ class visualDomBg {
         this.intervalTime = option.intervalTime || 1;
     }
     init () {
+        this.reset();
         this.playMotion();
+    }
+    reset() {
+        if(!this.ele.hasChildNodes()) return;
+
+        this.ele.childNodes.forEach((v) => {
+            if(this.motion) cancelAnimationFrame(this.motion);
+            this.ele.removeChild(v);
+        });
     }
     makeSpan() {
         let span = document.createElement('span');
@@ -40,9 +49,9 @@ class visualDomBg {
                 timeline.to(span, 3, {x: -50, ease:'Linear.easeNone'})
                     .to(span, 3, {x: 0, ease:'Linear.easeNone'});
             }
-            requestAnimationFrame(motion);
+            _.motion = requestAnimationFrame(motion);
         }
-        requestAnimationFrame(motion);
+        _.motion = requestAnimationFrame(motion);
     }
 }
 
