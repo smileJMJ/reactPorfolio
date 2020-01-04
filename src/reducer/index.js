@@ -8,7 +8,8 @@ const initalState = {
     menuData: [], // 메뉴 데이터
     mainStatus: 'start', // 메인 상태(start, website, websolution, end)
     language: 'kor', // 언어
-    headerType: 'black' // 헤더 타입 (black, white)
+    headerType: 'black', // 헤더 타입 (black, white)
+    theme: 'dark' // 테마 - dark / light
 };
 
 export default function reducer(state = initalState, action) {
@@ -29,6 +30,8 @@ export default function reducer(state = initalState, action) {
             return {...state, language: action.language};
         case 'CHANGE_HEADER_TYPE':
             return {...state, headerType: action.headerType};
+        case 'CHANGE_THEME':
+            return {...state, theme: action.theme};
         default:
             return state;
     }

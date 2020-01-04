@@ -84,8 +84,39 @@
 #btnGnb i span:nth-child(3) { top: 51px; }
 #header.black #btnGnb i span { background: #333; }
 #header.white #btnGnb i span { background: #fff; }
-#Gnb {display: none;}
 
+#gnb {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+}
+#gnb .gnbInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+#gnb li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#gnb a {
+    font-family: 'NotoSanskr_Medium';
+    font-size: 45px;
+    color: #fff;
+}
+#gnb button {
+    margin: 0 20px;
+    font-family: 'NotoSanskr_Medium';
+    font-size: 36px;
+    color: #fff;
+    opacity: 0.8;
+}
 
 /*  LIST  */
 .itemArea {

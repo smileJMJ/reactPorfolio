@@ -10,9 +10,17 @@ class List extends Component {
         super(props);
         this.props.changeHeaderType('white'); // header 색상 변경
     }
-    componentDidMount() {
-        let language = this.props.language;
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if((this.props.language !== nextProps.language) ||
+            (this.props.theme !== nextProps.theme)) {
+            return true;
+        }
+        return false;
+    }
 
+    componentWillUpdate() {
+        let language = this.props.language;
+console.log(language)
         // visual Data
         axios.get(`/json/${language}/visualData.json`)
             .then(response => {
@@ -39,7 +47,8 @@ const mapStateToProps = (state) => {
       visualData: state.visualData,
       listData: state.listData,
       language: state.language,
-      headerType: state.headerType
+      headerType: state.headerType,
+      theme: state.theme
   }
 };
 

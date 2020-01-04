@@ -7,6 +7,7 @@ export const LOAD_VIEW = 'LOAD_VIEW';
 export const CHANGE_MAIN_STATUS = 'CHANGE_MAIN_STATUS';
 export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
 export const CHANGE_HEADER_TYPE = 'CHANGE_HEADER_TYPE';
+export const CHANGE_THEME = 'CHANE_THEME';
 
 
 // Action Creator
@@ -28,3 +29,4 @@ export const loadView = makeActionCreator('LOAD_VIEW', 'id', 'data');
 export const changeMainStatus = makeActionCreator('CHANGE_MAIN_STATUS', 'mainStatus');
 export const changeLanguage = makeActionCreator('CHANGE_LANGUAGE', 'language');
 export const changeHeaderType = makeActionCreator('CHANGE_HEADER_TYPE', 'headerType');
+export const changeTheme = makeActionCreator('CHANGE_THEME', 'theme');

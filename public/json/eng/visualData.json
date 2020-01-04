@@ -2,7 +2,7 @@
   "data": [
     {
       "idx": 0,
-      "name": "인태스크",
+      "name": "inTASK",
       "date": "2019.09 ~ 2019.11",
       "kind": "SOLUTION",
       "img": "/images/visual/cloud.jpg",
@@ -11,7 +11,7 @@
     },
     {
       "idx": 1,
-      "name": "인에어",
+      "name": "inAIR",
       "date": "2019.09 ~ 2019.11",
       "kind": "WEBSITE",
       "img": "/images/visual/star.jpg",
@@ -20,7 +20,7 @@
     },
     {
       "idx": 2,
-      "name": "KT 채용",
+      "name": "KT RECRUIT",
       "date": "2019.09 ~ 2019.11",
       "kind": "WEBSITE",
       "img": "/images/visual/sunset.jpg",
