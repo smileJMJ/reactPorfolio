@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Ripple from './module/Ripple';
 import VisualDom from './module/visualDom';
-import styles from './visual.module.css';
 
 class Visual extends Component {
     // List에서 props로 data 받을 때, data 변경될 때만 rerender하기 위해 설정
@@ -42,7 +41,7 @@ class Visual extends Component {
         return(
             <div>
                 <VisualDom data={this.props.data}></VisualDom>
-                <canvas className={styles.ripple} id="ripple"></canvas>
+                <canvas className="ripple" id="ripple"></canvas>
             </div>
         );
     }

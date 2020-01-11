@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'resources/js/resources.js';
-import 'resources/css/style.css';
+import 'resources/style/style.scss';
 
 import Header from 'component/layout/Header';
 import Main from 'component/main/Main';
