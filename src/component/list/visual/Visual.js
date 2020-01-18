@@ -10,12 +10,7 @@ class Visual extends Component {
         return false;
     }
     componentDidMount() {
-        let visualCanvas;
         let rippleCanvas, ripple;
-
-        visualCanvas = document.getElementById('visual');
-        visualCanvas.width = visualCanvas.clientWidth;
-        visualCanvas.height = visualCanvas.clientHeight;
 
         rippleCanvas = document.getElementById('ripple');
         rippleCanvas.width = rippleCanvas.clientWidth;
