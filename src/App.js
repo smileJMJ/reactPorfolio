@@ -10,6 +10,7 @@ import About from 'component/about/About';
 import List from 'component/list/List';
 import View from 'component/view/View';
 import NotFound from 'component/etc/NotFound';
+import Test from 'component/test/test';
 
 class App extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
             <Router>
                 <Header></Header>
                 <Switch>
+                    <Route path="/test" component={Test}/>
                     <Route path="/about" component={About}/>
                     <Route path="/work" component={List}/>
                     <Route path="/view/:id" component={View}/>
