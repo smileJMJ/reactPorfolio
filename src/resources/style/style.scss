@@ -182,8 +182,52 @@
   background-size: contain;
 }
 
+.itemArea {
+  padding:85px 0;
 
-/*  테마별 색상 변경 - LAYOUT  */
+  ul {
+    display:flex;
+    flex-wrap:wrap;
+    overflow:hidden;
+    width:100%;
+
+    li {
+      width:33.33%;
+      padding:0 1%;
+
+      figure {
+        padding:10px;
+        border-radius:30px;
+        box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+
+        img {
+          width: 100%;
+        }
+      }
+
+      dl {
+        margin-top: 15px;
+
+        dt {
+          font-size: 16px;
+          color: #333;
+        }
+        dd {
+          margin-top: 10px;
+          font-size: 15px;
+          color: #bdbdbd;
+        }
+      }
+    }
+  }
+}
+/*.itemArea ul {}
+.itemArea ul li {width:33.33%; padding:0 1%;}
+.itemArea ul li figure {padding:10px; border-radius:30px; box-shadow:3px 3px 3px rgba(0,0,0,0.1);}
+.itemArea ul li img {width:100%;}*/
+
+
+  /*  테마별 색상 변경 - LAYOUT  */
 #root[data-theme="dark"] h1 a::after { background: $darkFontColor; }
 #root[data-theme="dark"] h1 a {
   color: $darkFontColor;

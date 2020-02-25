@@ -3,17 +3,20 @@
     {
       "id": 0,
       "title": "타이틀 0",
-      "contents": "내용 0"
+      "contents": "내용 0",
+      "thumb": "/images/list/img_thumb1.jpg"
     },
     {
       "id": 1,
       "title": "타이틀 1",
-      "contents": "내용 1"
+      "contents": "내용 1",
+      "thumb": "/images/list/img_thumb1.jpg"
     },
     {
       "id": 2,
       "title": "타이틀 2",
-      "contents": "내용 2"
+      "contents": "내용 2",
+      "thumb": "/images/list/img_thumb1.jpg"
     }
   ]
 }

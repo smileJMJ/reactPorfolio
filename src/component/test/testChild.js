@@ -7,14 +7,11 @@ import * as actions from "../../action";
 
 class TestChild extends Component {
     changeTheme(t) {
-        //t === 'dark' ? 'bright' : 'dark'
         const theme = composeThemeFromProps(styles, t, {compose: 'replace'});
-        console.log(theme);
         this.props.changeTheme(theme);
     }
     render() {
         const theme = composeThemeFromProps(styles, this.props, {compose: 'replace'});
-        console.log(this.props)
         return(
             <>
                 <button className={theme} onClick={() => {this.changeTheme(this.props);}}>버튼</button>

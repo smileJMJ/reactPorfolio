@@ -13,7 +13,17 @@ class Item extends Component {
                     <ul>
                         {
                             this.props.data.map((v, i) => {
-                                return <li key={v.id}><Link to={`/view/${v.id}`}>{v.title}</Link></li>;
+                                return (
+                                    <li key={v.id}>
+                                        <Link to={`/view/${v.id}`}>
+                                            <figure><img src={v.thumb} alt=""/></figure>
+                                            <dl>
+                                                <dt>{v.title}</dt>
+                                                <dd>{v.contents}</dd>
+                                            </dl>
+                                        </Link>
+                                    </li>
+                                );
                             })
                         }
                     </ul>
